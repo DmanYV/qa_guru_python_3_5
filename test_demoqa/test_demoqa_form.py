@@ -4,7 +4,6 @@ from selene import be, have
 
 
 def test_form():
-    browser.open('https://demoqa.com/automation-practice-form')
     browser.element('.practice-form-wrapper').should(have.text('Student Registration Form'))
     browser.element('#firstName').type('Dmitry')
     browser.element('#lastName').type('Yanyshev')

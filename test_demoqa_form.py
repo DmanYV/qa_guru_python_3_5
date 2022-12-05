@@ -11,3 +11,5 @@ def test_form():
     browser.element('#userEmail').type('mail@mail.ru')
     browser.element('#gender-radio-1').double_click()
     browser.element('#userNumber').type('1234567891')
+    browser.element('#dateOfBirthInput').click()
+    browser.element('.react-datepicker__month-select').click()

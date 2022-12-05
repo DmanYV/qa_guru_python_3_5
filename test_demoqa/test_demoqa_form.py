@@ -33,7 +33,6 @@ def test_form():
     # Finally
     browser.element('#submit').press_enter()
 
-
     # Check finally form
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
     # Check results
@@ -41,7 +40,7 @@ def test_form():
         'Dmitry Yanyshev' and
         'mail@mail.ru' and
         'Male' and
-        '1234567891'and
+        '1234567891' and
         '06 April,1995' and
         'Maths' and
         'Sports' and

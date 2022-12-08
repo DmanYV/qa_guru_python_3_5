@@ -4,11 +4,11 @@ from pathlib import Path
 
 
 def test_form():
+
     # open url
-
     browser.open('/automation-practice-form')
-    # User Data
 
+    # User Data
     browser.element('#firstName').type('Dmitry')
     browser.element('#lastName').type('Yanyshev')
     browser.element('#userEmail').type('mail@mail.ru')
@@ -38,12 +38,14 @@ def test_form():
     browser.element('#currentAddress').type("Победы")
     browser.element('#react-select-3-input').type('NCR').press_enter()
     browser.element('#react-select-4-input').type('Gurgaon').press_enter()
+
     # Finally
     browser.element('#submit').press_enter()
 
     # Check finally form
     browser.element('#example-modal-sizes-title-lg').should(
         have.text('Thanks for submitting the form'))
+
     # Check results
     browser.element('.table').should(have.text(
         'Dmitry Yanyshev' and
